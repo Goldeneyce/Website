@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Everest World Lifts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-text">Everest<span>World</span>Lifts</div>
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Our Premium Products</h1>
+            <p>Discover our range of high-quality elevators and lifts from world-leading manufacturers.</p>
+        </div>
+    </section>
+
+    <!-- Product Filters -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="passenger">Passenger Elevators</button>
+                <button class="filter-btn" data-filter="freight">Freight Lifts</button>
+                <button class="filter-btn" data-filter="accessibility">Accessibility Solutions</button>
+                <button class="filter-btn" data-filter="special">Specialized Lifts</button>
+            </div>
+
+            <div class="products-grid">
+                <!-- Passenger Elevators -->
+                <div class="product-card" data-category="passenger" id="passenger">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1581973832607-3d665e2a1d4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Fuji Premium Passenger Elevator</h3>
+                        <p>High-speed, energy-efficient passenger elevator with advanced safety features.</p>
+                        <ul>
+                            <li>Capacity: 6-20 persons</li>
+                            <li>Speed: 1.0-2.5 m/s</li>
+                            <li>Machine Room: Optional MRL design</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="passenger">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Mitsubishi Residential Elevator</h3>
+                        <p>Quiet, compact home elevator with customizable interior designs.</p>
+                        <ul>
+                            <li>Capacity: 3-6 persons</li>
+                            <li>Speed: 0.3-0.5 m/s</li>
+                            <li>Installation: Minimal construction required</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+
+                <!-- Freight Lifts -->
+                <div class="product-card" data-category="freight" id="freight">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Industrial Freight Elevator</h3>
+                        <p>Heavy-duty freight elevator designed for industrial applications.</p>
+                        <ul>
+                            <li>Capacity: 1,000-5,000 kg</li>
+                            <li>Speed: 0.25-0.5 m/s</li>
+                            <li>Options: Various door configurations available</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="freight">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Service Lift</h3>
+                        <p>Compact service lift for restaurants, hospitals, and libraries.</p>
+                        <ul>
+                            <li>Capacity: 50-200 kg</li>
+                            <li>Speed: 0.3-0.5 m/s</li>
+                            <li>Applications: Food, documents, medical supplies</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+
+                <!-- Accessibility Solutions -->
+                <div class="product-card" data-category="accessibility" id="accessibility">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1572021335461-2d5e87c4b0ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Wheelchair Platform Lift</h3>
+                        <p>ADA-compliant vertical platform lift for accessibility.</p>
+                        <ul>
+                            <li>Capacity: 250-340 kg</li>
+                            <li>Travel: Up to 4 meters</li>
+                            <li>Features: Foldable platform, safety sensors</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessibility">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1615566806388-64cec223c839?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Stairlift</h3>
+                        <p>Residential stairlift for straight and curved staircases.</p>
+                        <ul>
+                            <li>Capacity: 115-160 kg</li>
+                            <li>Power: Battery backup system</li>
+                            <li>Options: Swivel seat, folding rail</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+
+                <!-- Specialized Lifts -->
+                <div class="product-card" data-category="special" id="special">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Panoramic Elevator</h3>
+                        <p>Glass elevator with stunning 360-degree views.</p>
+                        <ul>
+                            <li>Capacity: 6-10 persons</li>
+                            <li>Design: Full glass cab and shaft</li>
+                            <li>Applications: Luxury buildings, hotels</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="special">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1549399542-7e82138a94d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Car Lift</h3>
+                        <p>Automotive lift for residential and commercial parking solutions.</p>
+                        <ul>
+                            <li>Capacity: 2,000-3,000 kg</li>
+                            <li>Types: Hydraulic, traction, scissors</li>
+                            <li>Applications: Showrooms, garages</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Authorized Partners</h2>
+            <div class="partner-logos">
+                <img src="https://placehold.co/300x150/ffffff/000000/png?text=Japan+Fuji" alt="Japan Fuji Elevators" class="partner-logo">
+                <img src="https://placehold.co/300x150/ffffff/000000/png?text=Shanghai+Mitsubishi" alt="Shanghai Mitsubishi Elevators" class="partner-logo">
+            </div>
+            <p style="text-align: center; margin-top: 2rem;">As a licensed distributor of Japan Fuji and Shanghai Mitsubishi elevators, we bring you world-class quality and reliability.</p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta section-padding">
+        <div class="container">
+            <h2>Can't Find What You're Looking For?</h2>
+            <p>We specialize in custom lift solutions. Contact us to discuss your specific requirements.</p>
+            <a href="contact.html" class="btn btn-light">Contact Our Experts</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <div class="logo-text">Everest<span>World</span>Lifts</div>
+                <p>Ascend with Confidence. Licensed distributor of Japan Fuji and Shanghai Mitsubishi elevators.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> +1 (800) 555-LIFT</p>
+                <p><i class="fas fa-envelope"></i> info@everestworldlifts.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Summit Avenue, Skyscraper City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Everest World Lifts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
