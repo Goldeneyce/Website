@@ -209,6 +209,17 @@ header .container {
     margin-top: 80px; /* Offset for fixed header */
 }
 
+/* Container for the video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1; /* Puts the video behind all other content */
+        }
+
 .hero-content {
     text-align: center;
     max-width: 800px;
