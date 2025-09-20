@@ -404,7 +404,7 @@ header .container {
 }
 
  .video-container {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -417,7 +417,7 @@ header .container {
             min-height: 100%;
             width: auto;
             height: auto;
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
