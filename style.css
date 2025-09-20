@@ -201,7 +201,7 @@ header .container {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://images.unsplash.com/photo-1581973832607-3d665e2a1d4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1581973832607-3d665e2a1d4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
     color: var(--primary-white);
     display: flex;
     align-items: center;
@@ -440,7 +440,7 @@ header .container {
 
 /* Call to Action */
 .cta {
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://images.unslash.com/photo-1601760561441-16420502c7e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unslash.com/photo-1601760561441-16420502c7e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center center/cover;
     color: var(--primary-white);
     text-align: center;
 }
