@@ -59,6 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Set current year in footer
+    const yearSpan = document.getElementById('currentYear');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    } else {
+        console.warn('Current year span is missing.');
+    }
+
 // Simple form validation for contact page
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
