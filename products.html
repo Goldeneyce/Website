@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header & Navigation -->
     <header>
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-text"><img src="everest-logo.png">Everest<span>World</span>Lifts</div>
+                <img src="everest-logo.png" alt="Everest World Lifts logo">
+                <div class="logo-text-container">
+                    <div class="logo-text">Everest<span>World</span>Lifts</div>
+                    <p class="logo-slogan">Safety Comes First</p>
+                </div>
             </a>
             <nav class="nav-menu">
                 <ul>
@@ -56,8 +61,9 @@
                 <button class="filter-btn" data-filter="special">Specialized Lifts</button>
             </div>
             <div class="product-download">
-                <h1>Download our complete catalogues</h1>
-                <p class="download-p1">Japan Fuji Catalogue <a href="assets/download/<span id="currentYear"></span> FUJI JAPAN catalog-2.pdf" class="catalogue-btn">Download</a></p> <p class="download-p1">Mitsubishi Catalogue <a href="assets/download/<span id="currentYear"></span> FUJI JAPAN catalog-2.pdf" class="catalogue-btn">Download</a></p>
+                <h2>Download our complete catalogues</h2>
+                <p class="download-p1">Japan Fuji Catalogue <a href="assets/download/fuji-catalogue.pdf" class="catalogue-btn">Download</a></p>
+                <p class="download-p1">Mitsubishi Catalogue <a href="assets/download/mitsubishi-catalogue.pdf" class="catalogue-btn">Download</a></p>
             </div>
 
             <div class="products-grid">
@@ -185,8 +191,14 @@
         <div class="container">
             <h2 class="section-title">Our Authorized Partners</h2>
             <div class="partner-logos">
-                <img src="https://placehold.co/300x150/ffffff/000000/png?text=Japan+Fuji" alt="Japan Fuji Elevators" class="partner-logo">
-                <img src="https://placehold.co/300x150/ffffff/000000/png?text=Shanghai+Mitsubishi" alt="Shanghai Mitsubishi Elevators" class="partner-logo">
+                <div class="partner-item">
+                    <img src="https://placehold.co/300x150/ffffff/000000/png?text=Japan+Fuji" alt="Japan Fuji Elevators" class="partner-logo">
+                    <p class="partner-text">Japan Fuji Elevators</p>
+                </div>
+                <div class="partner-item">
+                    <img src="https://placehold.co/300x150/ffffff/000000/png?text=Shanghai+Mitsubishi" alt="Shanghai Mitsubishi Elevators" class="partner-logo">
+                    <p class="partner-text">Shanghai Mitsubishi Elevators</p>
+                </div>
             </div>
             <p style="text-align: center; margin-top: 2rem;">As a licensed distributor of Japan Fuji and Shanghai Mitsubishi elevators, we bring you world-class quality and reliability.</p>
         </div>
@@ -204,7 +216,7 @@
         <div class="container">
             <h2>Can't Find What You're Looking For?</h2>
             <p>We specialize in custom lift solutions. Contact us to discuss your specific requirements.</p>
-            <a href="contact.html" class="btn btn-light">Contact Our Experts</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Our Experts</a>
         </div>
     </section>
 

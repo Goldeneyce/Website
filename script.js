@@ -60,12 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Set current year in footer
+document.addEventListener('DOMContentLoaded', function() {
     const yearSpan = document.getElementById('currentYear');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     } else {
         console.warn('Current year span is missing.');
     }
+});
 
 // Simple form validation for contact page
 document.addEventListener('DOMContentLoaded', function() {
@@ -149,4 +151,49 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// Add step numbers styling for service process
+document.addEventListener('DOMContentLoaded', function() {
+    const style = document.createElement('style');
+    style.textContent = `
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .partner-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            min-height: 120px;
+        }
+        
+        .testimonial-author h4 {
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial-author p {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+    `;
+    document.head.appendChild(style);
 });
