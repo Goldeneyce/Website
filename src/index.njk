@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+title: Everest World Lifts | Elevator Solutions in Abuja
+description: Elevator distribution, installation, maintenance, modernization, and consulting services for Nigerian homes and businesses.
+navKey: home
+heroTitle: Ascend with Confidence
+heroText: Safety-led elevator and lift solutions for homes, businesses, and public facilities.
+heroPrimaryLabel: Explore products
+heroPrimaryUrl: /products/
+heroSecondaryLabel: Request a quote
+heroSecondaryUrl: /contact/
+---
+{% include "components/hero.njk" %}
+
+<section class="section-padding" aria-labelledby="services-title">
+  <div class="container">
+    <p class="eyebrow">End-to-end support</p>
+    <h2 class="section-title" id="services-title">Our Services</h2>
+    <div class="card-grid">
+      <article class="info-card"><span class="card-number">01</span><h3>Product Distribution</h3><p>Elevator systems selected around your building, traffic needs, and budget.</p></article>
+      <article class="info-card"><span class="card-number">02</span><h3>Professional Installation</h3><p>Careful installation, testing, commissioning, and handover by trained technicians.</p></article>
+      <article class="info-card"><span class="card-number">03</span><h3>Maintenance & Repair</h3><p>Preventive maintenance and responsive support designed to protect uptime and safety.</p></article>
+      <article class="info-card"><span class="card-number">04</span><h3>Modernization</h3><p>Targeted upgrades that improve reliability, efficiency, safety, and appearance.</p></article>
+    </div>
+    <div class="centered-action"><a href="/services/" class="btn btn-dark">View all services</a></div>
+  </div>
+</section>
+
+<section class="section-padding bg-light" aria-labelledby="products-title">
+  <div class="container">
+    <p class="eyebrow">Built for every environment</p>
+    <h2 class="section-title" id="products-title">Our Product Range</h2>
+    <div class="image-card-grid">
+      <a href="/products/#passenger" class="image-card"><img src="/assets/images/site/passenger-elevator.webp" alt="Modern passenger elevator cabin" loading="lazy"><span><strong>Passenger Elevators</strong><small>Commercial, residential, and institutional use</small></span></a>
+      <a href="/products/#freight" class="image-card"><img src="/assets/images/site/freight-elevator.webp" alt="Industrial freight elevator" loading="lazy"><span><strong>Freight & Service Lifts</strong><small>Reliable movement of goods and equipment</small></span></a>
+      <a href="/products/#accessibility" class="image-card"><img src="/assets/images/site/accessibility-lift.webp" alt="Wheelchair platform lift beside stairs" loading="lazy"><span><strong>Accessibility Solutions</strong><small>Inclusive vertical access</small></span></a>
+      <a href="/products/#special" class="image-card"><img src="/assets/images/site/panoramic-elevator.webp" alt="Panoramic glass elevator in a hotel atrium" loading="lazy"><span><strong>Specialized Lifts</strong><small>Panoramic, automotive, and custom solutions</small></span></a>
+    </div>
+  </div>
+</section>
+
+{% include "components/partners.njk" %}
+
+<section class="section-padding" aria-labelledby="insights-title">
+  <div class="container">
+    <p class="eyebrow">Practical guidance</p>
+    <h2 class="section-title" id="insights-title">Latest Insights</h2>
+    {% if posts.length %}
+      <div class="blog-grid">
+        {% for post in posts %}
+          {% if loop.index <= 3 %}
+          <article class="blog-card">
+            <p class="post-date">{{ post.publishedAt | readableDate }}</p>
+            <h3><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+            <a class="text-link" href="/blog/{{ post.slug }}/">Read article</a>
+          </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state"><p>Our practical elevator guides and maintenance insights are coming soon.</p><a href="/blog/" class="text-link">Visit the blog</a></div>
+    {% endif %}
+  </div>
+</section>
+
+{% include "components/cta.njk" %}

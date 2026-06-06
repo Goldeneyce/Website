@@ -1,0 +1,36 @@
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div>
+      <div class="footer-brand">Everest<span>World</span>Lifts</div>
+      <p>Safety-led elevator solutions for homes, businesses, and public facilities.</p>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <ul class="footer-links">
+        {% for item in site.navigation %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <address>
+        <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <span>{{ site.address }}</span>
+      </address>
+      {% if site.social.length %}
+        <ul class="social-links">
+          {% for profile in site.social %}
+            <li><a href="{{ profile.url }}" rel="me noopener">{{ profile.label }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; <span data-current-year></span> Everest World Lifts. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

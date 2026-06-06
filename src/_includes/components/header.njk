@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="Everest World Lifts home">
+      <img src="/assets/images/brand/everest-logo.png" alt="" width="60" height="60">
+      <span class="logo-copy">
+        <span class="logo-text">Everest<span>World</span>Lifts</span>
+        <span class="logo-slogan">Safety Comes First</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="sr-only">Open navigation</span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <nav class="nav-menu" id="primary-navigation" aria-label="Primary navigation">
+      <ul>
+        {% for item in site.navigation %}
+          <li>
+            <a href="{{ item.url }}"{% if item.key == navKey %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

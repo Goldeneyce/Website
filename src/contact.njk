@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Contact Everest World Lifts
+description: Contact Everest World Lifts for elevator product inquiries, project quotes, maintenance, and emergency support.
+navKey: contact
+heroCompact: true
+heroTitle: Let’s Talk About Your Project
+heroText: Tell us what you are planning or the support you need. Our team will respond as soon as possible.
+heroImage: /assets/images/site/hero-elevator.webp
+---
+{% include "components/hero.njk" %}
+
+<section class="section-padding">
+  <div class="container contact-grid">
+    <div>
+      <p class="eyebrow">Contact details</p>
+      <h2>Reach our Abuja team</h2>
+      <div class="contact-list">
+        <div><h3>Office</h3><p>{{ site.address }}</p></div>
+        <div><h3>Phone</h3><p><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a><br><a href="tel:+2348136666766">+234 813 666 6766</a><br><a href="tel:+2348032821277">+234 803 282 1277</a></p></div>
+        <div><h3>Email</h3><p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="mailto:support@everestworldlifts.com">support@everestworldlifts.com</a></p></div>
+        <div><h3>Business hours</h3><p>Monday-Friday: 8:00 AM-6:00 PM<br>Saturday: 9:00 AM-1:00 PM<br>Sunday: Closed</p></div>
+        <div class="emergency"><h3>Emergency support</h3><p>24/7 support for existing customers<br><a href="tel:{{ site.emergencyPhoneHref }}">{{ site.emergencyPhone }}</a></p></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="eyebrow">Send an inquiry</p>
+      <h2>How can we help?</h2>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden-field"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+        <div class="form-group"><label for="name">Full name <span aria-hidden="true">*</span></label><input type="text" id="name" name="name" autocomplete="name" required></div>
+        <div class="form-group"><label for="email">Email address <span aria-hidden="true">*</span></label><input type="email" id="email" name="email" autocomplete="email" required></div>
+        <div class="form-group"><label for="phone">Phone number</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+        <div class="form-group"><label for="subject">Subject</label><select id="subject" name="subject"><option value="">Select a subject</option><option value="general">General inquiry</option><option value="quote">Request a quote</option><option value="product">Product information</option><option value="service">Service & maintenance</option><option value="support">Technical support</option><option value="other">Other</option></select></div>
+        <div class="form-group"><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="7" required></textarea></div>
+        <p class="form-note">We will use your details only to respond to this inquiry.</p>
+        <button type="submit" class="btn btn-primary">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="map-section" aria-label="Office location">
+  <iframe title="Map showing Everest World Lifts office in Lifecamp, Abuja" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8848296922242!2d7.393689999999999!3d9.0742558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e756260a21e27%3A0xa2d23f9da878!2sEverest%20World%20Lifts%20Ltd!5e0!3m2!1sen!2sng!4v1758737917914!5m2!1sen!2sng" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+</section>

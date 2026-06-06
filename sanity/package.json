@@ -1,0 +1,14 @@
+{
+  "name": "everest-world-lifts-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "sanity": "^4.0.0",
+    "styled-components": "^6.1.0"
+  }
+}

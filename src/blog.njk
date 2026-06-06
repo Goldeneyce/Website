@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: Elevator Insights | Everest World Lifts Blog
+description: Practical elevator planning, safety, maintenance, and modernization guidance from Everest World Lifts.
+navKey: blog
+heroCompact: true
+heroTitle: Elevator Insights
+heroText: Practical guidance for planning, maintaining, and improving vertical transportation systems.
+heroImage: /assets/images/site/maintenance-technician.webp
+---
+{% include "components/hero.njk" %}
+
+<section class="section-padding">
+  <div class="container">
+    {% if posts.length %}
+      <div class="blog-grid">
+        {% for post in posts %}
+          <article class="blog-card">
+            <p class="post-date">{{ post.publishedAt | readableDate }}</p>
+            <h2><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h2>
+            <p>{{ post.excerpt }}</p>
+            <a class="text-link" href="/blog/{{ post.slug }}/">Read article</a>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <p class="eyebrow">Coming soon</p>
+        <h2>We are preparing practical elevator guides</h2>
+        <p>New articles will cover planning, safety, maintenance, accessibility, and modernization.</p>
+        <a href="/contact/" class="btn btn-primary">Ask our team a question</a>
+      </div>
+    {% endif %}
+  </div>
+</section>

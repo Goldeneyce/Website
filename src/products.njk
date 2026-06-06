@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+title: Elevator Products | Everest World Lifts
+description: Explore passenger, freight, accessibility, panoramic, automotive, and residential elevator solutions.
+navKey: products
+heroCompact: true
+heroTitle: Elevator Products
+heroText: Flexible vertical-transport solutions selected around your building and operational needs.
+heroImage: /assets/images/site/passenger-elevator.webp
+---
+{% include "components/hero.njk" %}
+
+<section class="section-padding">
+  <div class="container">
+    <div class="product-filters" aria-label="Filter products">
+      <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All products</button>
+      <button class="filter-btn" type="button" data-filter="passenger" aria-pressed="false">Passenger</button>
+      <button class="filter-btn" type="button" data-filter="freight" aria-pressed="false">Freight</button>
+      <button class="filter-btn" type="button" data-filter="accessibility" aria-pressed="false">Accessibility</button>
+      <button class="filter-btn" type="button" data-filter="special" aria-pressed="false">Specialized</button>
+    </div>
+
+    <aside class="catalogues" aria-labelledby="catalogue-title">
+      <div><p class="eyebrow">Technical resources</p><h2 id="catalogue-title">Download Product Catalogues</h2></div>
+      <div class="button-group">
+        <a href="/assets/download/fuji-catalogue.pdf" class="btn btn-primary">Japan Fuji catalogue</a>
+        <a href="/assets/download/mitsubishi-catalogue.pdf" class="btn btn-dark">Mitsubishi catalogue</a>
+      </div>
+    </aside>
+
+    <div class="product-grid">
+      <article class="product-card" data-category="passenger" id="passenger"><img src="/assets/images/site/passenger-elevator.webp" alt="Premium passenger elevator cabin" loading="lazy"><div><h2>Passenger Elevators</h2><p>Comfortable, efficient movement for offices, apartments, hotels, and public buildings.</p><a href="/contact/?subject=quote" class="text-link">Request a quote</a></div></article>
+      <article class="product-card" data-category="passenger"><img src="/assets/images/site/home-elevator.webp" alt="Residential home elevator beside a staircase" loading="lazy"><div><h2>Home Elevators</h2><p>Compact residential solutions designed to integrate with the character of your home.</p><a href="/contact/?subject=quote" class="text-link">Request a quote</a></div></article>
+      <article class="product-card" data-category="freight" id="freight"><img src="/assets/images/site/freight-elevator.webp" alt="Heavy-duty freight elevator in a warehouse" loading="lazy"><div><h2>Freight Elevators</h2><p>Durable systems for warehouses, factories, retail operations, and service environments.</p><a href="/contact/?subject=quote" class="text-link">Request a quote</a></div></article>
+      <article class="product-card" data-category="freight"><img src="/assets/images/site/hospital-elevator.webp" alt="Wide hospital service elevator doors" loading="lazy"><div><h2>Service & Bed Elevators</h2><p>Purpose-built movement for hospitality, healthcare, and back-of-house operations.</p><a href="/contact/?subject=quote" class="text-link">Request a quote</a></div></article>
+      <article class="product-card" data-category="accessibility" id="accessibility"><img src="/assets/images/site/accessibility-lift.webp" alt="Accessible wheelchair platform lift" loading="lazy"><div><h2>Platform Lifts</h2><p>Inclusive access solutions for homes, workplaces, and public buildings.</p><a href="/contact/?subject=quote" class="text-link">Request a quote</a></div></article>
+      <article class="product-card" data-category="special" id="special"><img src="/assets/images/site/panoramic-elevator.webp" alt="Panoramic glass elevator in a modern atrium" loading="lazy"><div><h2>Panoramic Elevators</h2><p>Architectural lift solutions that turn vertical movement into a memorable experience.</p><a href="/contact/?subject=quote" class="text-link">Request a quote</a></div></article>
+      <article class="product-card" data-category="special"><img src="/assets/images/site/car-lift.webp" alt="Automotive lift in a modern parking garage" loading="lazy"><div><h2>Car Lifts</h2><p>Automotive lifting solutions for parking facilities, garages, and showrooms.</p><a href="/contact/?subject=quote" class="text-link">Request a quote</a></div></article>
+    </div>
+  </div>
+</section>
+
+{% include "components/partners.njk" %}
+{% include "components/cta.njk" %}

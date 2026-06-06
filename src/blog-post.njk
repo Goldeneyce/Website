@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: posts
+  size: 1
+  alias: post
+permalink: "blog/{{ post.slug }}/index.html"
+navKey: blog
+eleventyComputed:
+  title: "{{ post.title }} | Everest World Lifts"
+  description: "{{ post.excerpt }}"
+---
+<article class="article">
+  <header class="article-header">
+    <div class="container article-narrow">
+      <p class="eyebrow">Elevator insights</p>
+      <h1>{{ post.title }}</h1>
+      <p class="post-date">{{ post.publishedAt | readableDate }}</p>
+      <p class="article-intro">{{ post.excerpt }}</p>
+    </div>
+  </header>
+  <div class="container article-narrow article-body">
+    {{ post.body | portableText | safe }}
+    <div class="article-cta"><h2>Need advice for your building?</h2><p>Our team can help you understand the options for your project.</p><a href="/contact/" class="btn btn-primary">Contact Everest World Lifts</a></div>
+  </div>
+</article>

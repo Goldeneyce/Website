@@ -1,0 +1,17 @@
+<section class="hero{% if heroCompact %} hero-compact{% endif %}">
+  <img class="hero-image" src="{{ heroImage or '/assets/images/site/hero-elevator.webp' }}" alt="" fetchpriority="high">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
+    <h1>{{ heroTitle }}</h1>
+    <p>{{ heroText }}</p>
+    {% if heroPrimaryLabel %}
+      <div class="button-group">
+        <a href="{{ heroPrimaryUrl }}" class="btn btn-primary">{{ heroPrimaryLabel }}</a>
+        {% if heroSecondaryLabel %}
+          <a href="{{ heroSecondaryUrl }}" class="btn btn-secondary">{{ heroSecondaryLabel }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>

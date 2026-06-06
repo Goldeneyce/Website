@@ -1,0 +1,7 @@
+_site/
+node_modules/
+.env
+.netlify/
+sanity/node_modules/
+sanity/dist/
+.eleventy-serve.*.log

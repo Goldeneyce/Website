@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <meta name="theme-color" content="#b9141b">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="icon" type="image/png" href="/assets/images/brand/everest-logo.png">
+    <link rel="apple-touch-icon" href="/assets/images/brand/everest-logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/site/hero-elevator.webp">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}",
+        "image": "{{ site.url }}/assets/images/brand/everest-logo.png",
+        "telephone": "{{ site.phone }}",
+        "email": "{{ site.email }}",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "8 Bello Gaya Street, Lifecamp",
+          "addressLocality": "Abuja",
+          "addressCountry": "NG"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    {% include "components/header.njk" %}
+    <main id="main-content">
+      {{ content | safe }}
+    </main>
+    {% include "components/footer.njk" %}
+    <script src="/assets/js/site.js" defer></script>
+  </body>
+</html>
