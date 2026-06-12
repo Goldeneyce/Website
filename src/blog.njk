@@ -16,10 +16,13 @@ heroImage: /assets/images/site/maintenance-technician.webp
       <div class="blog-grid">
         {% for post in posts %}
           <article class="blog-card">
-            <p class="post-date">{{ post.publishedAt | readableDate }}</p>
-            <h2><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h2>
-            <p>{{ post.excerpt }}</p>
-            <a class="text-link" href="/blog/{{ post.slug }}/">Read article</a>
+            {% if post.imageUrl %}<a class="blog-card-image" href="/blog/{{ post.slug }}/"><img src="{{ post.imageUrl }}" alt="{{ post.imageAlt or post.title }}" loading="lazy"></a>{% endif %}
+            <div class="blog-card-content">
+              <p class="blog-meta"><span>{{ post.category or "Elevator insights" }}</span><time datetime="{{ post.publishedAt }}">{{ post.publishedAt | readableDate }}</time></p>
+              <h2><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h2>
+              <p>{{ post.excerpt }}</p>
+              <a class="text-link" href="/blog/{{ post.slug }}/">Read article</a>
+            </div>
           </article>
         {% endfor %}
       </div>

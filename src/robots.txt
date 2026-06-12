@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://everestworldlifts.com/sitemap.xml
+Sitemap: https://www.everestworldlifts.com/sitemap.xml

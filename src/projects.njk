@@ -1,36 +1,100 @@
 ---
 layout: layouts/base.njk
-title: Elevator Solutions by Environment | Everest World Lifts
-description: Explore elevator and lift solutions for commercial, residential, healthcare, hospitality, industrial, and accessibility environments.
+title: Projects | Everest World Lifts
+description: Explore verified elevator, escalator, installation, replacement, and maintenance projects delivered by Everest World Lifts across Nigeria.
 navKey: projects
-heroCompact: true
-heroTitle: Solutions for Every Environment
-heroText: We help clients plan elevator systems around the people, goods, and operations that move through their buildings.
-heroImage: /assets/images/site/commercial-elevator-lobby.webp
 ---
-{% include "components/hero.njk" %}
 
-<section class="section-padding">
-  <div class="container">
-    <p class="eyebrow">Where we work</p>
-    <h2 class="section-title">Built Around Real Building Needs</h2>
-    <div class="solution-grid">
-      <article><img src="/assets/images/site/commercial-elevator-lobby.webp" alt="Commercial lobby with multiple elevator doors" loading="lazy"><div><h3>Commercial & Office</h3><p>Passenger flow, reliability, and a professional arrival experience.</p></div></article>
-      <article><img src="/assets/images/site/home-elevator.webp" alt="Home elevator integrated beside a staircase" loading="lazy"><div><h3>Residential</h3><p>Quiet, comfortable access for private homes and apartment buildings.</p></div></article>
-      <article><img src="/assets/images/site/hospital-elevator.webp" alt="Wide healthcare elevator entrance" loading="lazy"><div><h3>Healthcare</h3><p>Purpose-designed movement for patients, beds, staff, and supplies.</p></div></article>
-      <article><img src="/assets/images/site/panoramic-elevator.webp" alt="Panoramic glass elevator in a hotel atrium" loading="lazy"><div><h3>Hospitality & Retail</h3><p>Reliable vertical movement with strong architectural presence.</p></div></article>
-      <article><img src="/assets/images/site/freight-elevator.webp" alt="Freight elevator in a warehouse" loading="lazy"><div><h3>Industrial & Logistics</h3><p>Durable freight movement designed around working loads and workflows.</p></div></article>
-      <article><img src="/assets/images/site/accessibility-lift.webp" alt="Wheelchair platform lift next to stairs" loading="lazy"><div><h3>Inclusive Access</h3><p>Platform and accessibility lifts that help make spaces easier to use.</p></div></article>
+<section class="projects-hero">
+  <div class="container projects-hero-grid">
+    <div class="projects-hero-copy">
+      <p class="eyebrow">Our track record</p>
+      <h1>Projects That Keep Nigeria Moving</h1>
+      <p>From government complexes to hotels, offices, and homes, our work is built around safe installation, dependable maintenance, and long-term performance.</p>
+      <div class="button-group">
+        <a href="#project-portfolio" class="btn btn-primary">Explore projects</a>
+        <a href="/contact/" class="btn btn-secondary">Discuss your project</a>
+      </div>
+    </div>
+    <div class="projects-hero-media" aria-label="Selected Everest World Lifts project locations">
+      <figure class="projects-hero-main">
+        <img src="/assets/images/projects/national-assembly.webp" alt="National Assembly Complex in Abuja">
+        <figcaption>National Assembly, Abuja</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/images/projects/rmrdc.webp" alt="Raw Materials Research and Development Council building in Abuja">
+        <figcaption>RMRDC, Abuja</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/images/projects/victoria-island.webp" alt="Aerial view of Victoria Island in Lagos">
+        <figcaption>Victoria Island, Lagos</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section class="section-padding bg-light">
-  <div class="container statement">
-    <p class="eyebrow">Verified work matters</p>
-    <h2>Project case studies are being prepared</h2>
-    <p>We are documenting completed installations with client approval. Speak with our team for relevant experience and references for your project type.</p>
-    <a href="/contact/" class="btn btn-primary">Request project references</a>
+<section class="project-overview" aria-label="Project portfolio overview">
+  <div class="container project-overview-grid">
+    <div><strong>15</strong><span>Verified project records</span></div>
+    <div><strong>2008-2016</strong><span>Profile-recorded delivery period</span></div>
+    <div><strong>4</strong><span>Core service categories</span></div>
+    <div><strong>3</strong><span>Cities represented</span></div>
+  </div>
+</section>
+
+<section class="section-padding project-portfolio" id="project-portfolio" aria-labelledby="project-title">
+  <div class="container">
+    <div class="project-heading">
+      <div>
+        <p class="eyebrow">Delivered experience</p>
+        <h2 class="section-title" id="project-title">Every Project, One Standard: Safety First</h2>
+      </div>
+      <p>These records are drawn from the Everest World Lifts corporate profile. Contract values and private award documents are intentionally not published.</p>
+    </div>
+
+    <div class="product-filters project-filters" aria-label="Filter projects by service">
+      <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All projects</button>
+      <button class="filter-btn" type="button" data-filter="installation" aria-pressed="false">Supply & installation</button>
+      <button class="filter-btn" type="button" data-filter="maintenance" aria-pressed="false">Maintenance</button>
+      <button class="filter-btn" type="button" data-filter="modernization" aria-pressed="false">Modernization</button>
+      <button class="filter-btn" type="button" data-filter="escalators" aria-pressed="false">Escalators</button>
+    </div>
+
+    <div class="project-image-note">
+      <strong>About the photographs</strong>
+      <p>Exact project locations are shown where a reliable public image was available. Cards labelled as a location view use a photograph of the surrounding city or area and do not claim to show the exact building.</p>
+    </div>
+
+    <div class="project-gallery">
+      {% for project in projects %}
+        <article class="project-card" data-category="{{ project.filter }}">
+          <figure class="project-card-image">
+            <img src="{{ project.image }}" alt="{{ project.imageAlt }}" loading="lazy">
+            <div class="project-card-badges">
+              <span>{{ project.year }}</span>
+              <span>{{ project.category }}</span>
+            </div>
+            <figcaption>{{ project.imageContext }}</figcaption>
+          </figure>
+          <div class="project-card-body">
+            <p class="project-service">{{ project.service }}</p>
+            <h2>{{ project.client }}</h2>
+            <p class="project-location">{{ project.location }}</p>
+            <p>{{ project.scope }}</p>
+            <a class="project-source" href="{{ project.imageSourceUrl }}" target="_blank" rel="noopener noreferrer">Image source: {{ project.imageSource }}</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="project-reference">
+      <div>
+        <p class="eyebrow">Need supporting information?</p>
+        <h2>Request Project References</h2>
+        <p>Talk with our team about relevant experience for your building, equipment, and service requirements.</p>
+      </div>
+      <a href="/contact/" class="btn btn-dark">Contact our team</a>
+    </div>
   </div>
 </section>
 

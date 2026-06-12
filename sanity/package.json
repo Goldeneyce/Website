@@ -5,10 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "sanity dev",
-    "deploy": "sanity deploy"
+    "build": "sanity build -y",
+    "deploy": "sanity deploy",
+    "seed:prepare": "node scripts/write-seed.mjs",
+    "seed": "npm run seed:prepare && sanity dataset import seed/starter-posts.ndjson production --missing",
+    "cors:add": "sanity cors add https://studio.everestworldlifts.com --credentials"
   },
   "dependencies": {
     "sanity": "^4.0.0",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.15"
   }
 }

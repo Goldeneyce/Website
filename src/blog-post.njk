@@ -7,18 +7,24 @@ pagination:
 permalink: "blog/{{ post.slug }}/index.html"
 navKey: blog
 eleventyComputed:
-  title: "{{ post.title }} | Everest World Lifts"
-  description: "{{ post.excerpt }}"
+  title: "{{ post.seoTitle or post.title }} | Everest World Lifts"
+  description: "{{ post.seoDescription or post.excerpt }}"
 ---
 <article class="article">
   <header class="article-header">
     <div class="container article-narrow">
       <p class="eyebrow">Elevator insights</p>
       <h1>{{ post.title }}</h1>
-      <p class="post-date">{{ post.publishedAt | readableDate }}</p>
+      <p class="blog-meta"><span>{{ post.category or "Elevator insights" }}</span><time datetime="{{ post.publishedAt }}">{{ post.publishedAt | readableDate }}</time></p>
       <p class="article-intro">{{ post.excerpt }}</p>
     </div>
   </header>
+  {% if post.imageUrl %}
+    <figure class="article-hero-image">
+      <img src="{{ post.imageUrl }}" alt="{{ post.imageAlt or post.title }}">
+      {% if post.imageCaption %}<figcaption>{{ post.imageCaption }}</figcaption>{% endif %}
+    </figure>
+  {% endif %}
   <div class="container article-narrow article-body">
     {{ post.body | portableText | safe }}
     <div class="article-cta"><h2>Need advice for your building?</h2><p>Our team can help you understand the options for your project.</p><a href="/contact/" class="btn btn-primary">Contact Everest World Lifts</a></div>

@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: Frequently Asked Questions | Everest World Lifts
+description: Answers to common questions about elevator selection, installation, maintenance, modernization, service coverage, and quotes.
+heroCompact: true
+heroTitle: Frequently Asked Questions
+heroText: Helpful answers about planning, installing, maintaining, and modernizing elevator systems.
+heroImage: /assets/images/site/passenger-elevator.webp
+---
+{% include "components/hero.njk" %}
+
+<section class="section-padding">
+  <div class="container article-narrow">
+    <p class="eyebrow">Common questions</p>
+    <h2>Planning and Service Information</h2>
+    <div class="faq-list">
+      <details open><summary>What vertical transportation products do you supply?</summary><p>We support passenger elevators, home elevators, freight and service lifts, bed elevators, platform lifts, panoramic elevators, car lifts, escalators, moving walkways, and other specialized solutions.</p></details>
+      <details><summary>Do you deliver and work outside Abuja?</summary><p>Yes. Everest World Lifts delivers nationwide and coordinates project requirements around each location.</p></details>
+      <details><summary>How do I request a quote?</summary><p>Use our <a href="/contact/?subject=quote">quote request form</a> and include the project location, building type, number of floors, expected use, and any available drawings or specifications. Our team will follow up for further details.</p></details>
+      <details><summary>How long does elevator installation take?</summary><p>Timelines depend on the elevator type, building readiness, product specification, logistics, and testing requirements. We provide a project-specific schedule after reviewing the scope and site conditions.</p></details>
+      <details><summary>Do you provide maintenance after installation?</summary><p>Yes. We provide preventive maintenance, troubleshooting, repair support, and modernization services designed to protect safety, reliability, and uptime.</p></details>
+      <details><summary>Can you modernize an existing elevator?</summary><p>Yes. Depending on the existing system, modernization may include controls, drives, doors, safety features, cabin finishes, and other components. A site assessment is required before recommendations can be made.</p></details>
+      <details><summary>Do you provide emergency support?</summary><p>24/7 emergency support is available for existing customers. Call <a href="tel:{{ site.emergencyPhoneHref }}">{{ site.emergencyPhone }}</a>.</p></details>
+      <details><summary>What information should I prepare before contacting you?</summary><p>Useful information includes the project location, building use, number of floors or stops, expected capacity, available shaft dimensions, desired timeline, and whether the project is new construction, replacement, or modernization.</p></details>
+      <details><summary>How long has Everest World Lifts been operating?</summary><p>The company was originally incorporated as Everest Elevators Ltd in June 2006 and changed its name to Everest World Lifts Ltd in February 2019. Managing Director and Chief Engineer Mr. George Naim has worked in the elevator industry since 1985.</p></details>
+    </div>
+  </div>
+</section>
+
+{% set ctaTitle = "Still have a question?" %}
+{% set ctaText = "Tell us about your building or elevator requirements and our team will help you understand the next step." %}
+{% set ctaLabel = "Contact our team" %}
+{% include "components/cta.njk" %}

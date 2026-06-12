@@ -18,8 +18,9 @@ heroImage: /assets/images/site/hero-elevator.webp
       <div class="contact-list">
         <div><h3>Office</h3><p>{{ site.address }}</p></div>
         <div><h3>Phone</h3><p><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a><br><a href="tel:+2348136666766">+234 813 666 6766</a><br><a href="tel:+2348032821277">+234 803 282 1277</a></p></div>
-        <div><h3>Email</h3><p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="mailto:support@everestworldlifts.com">support@everestworldlifts.com</a></p></div>
-        <div><h3>Business hours</h3><p>Monday-Friday: 8:00 AM-6:00 PM<br>Saturday: 9:00 AM-1:00 PM<br>Sunday: Closed</p></div>
+        <div><h3>Email</h3><p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="mailto:{{ site.supportEmail }}">{{ site.supportEmail }}</a></p></div>
+        <div><h3>Business hours</h3><p>{% for hours in site.businessHours %}{{ hours }}{% if not loop.last %}<br>{% endif %}{% endfor %}</p></div>
+        <div><h3>Service coverage</h3><p>{{ site.deliveryArea }}.</p></div>
         <div class="emergency"><h3>Emergency support</h3><p>24/7 support for existing customers<br><a href="tel:{{ site.emergencyPhoneHref }}">{{ site.emergencyPhone }}</a></p></div>
       </div>
     </div>
@@ -35,7 +36,7 @@ heroImage: /assets/images/site/hero-elevator.webp
         <div class="form-group"><label for="phone">Phone number</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
         <div class="form-group"><label for="subject">Subject</label><select id="subject" name="subject"><option value="">Select a subject</option><option value="general">General inquiry</option><option value="quote">Request a quote</option><option value="product">Product information</option><option value="service">Service & maintenance</option><option value="support">Technical support</option><option value="other">Other</option></select></div>
         <div class="form-group"><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="7" required></textarea></div>
-        <p class="form-note">We will use your details only to respond to this inquiry.</p>
+        <p class="form-note">We will use your details only to respond to this inquiry, as described in our <a href="/privacy/">Privacy Policy</a>.</p>
         <button type="submit" class="btn btn-primary">Send message</button>
       </form>
     </div>

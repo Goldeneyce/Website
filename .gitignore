@@ -4,4 +4,6 @@ node_modules/
 .netlify/
 sanity/node_modules/
 sanity/dist/
+sanity/.sanity/
 .eleventy-serve.*.log
+tmp/

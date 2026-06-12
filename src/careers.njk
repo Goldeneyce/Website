@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+title: Careers | Everest World Lifts
+description: Explore career opportunities and register your interest in working with Everest World Lifts.
+heroCompact: true
+heroTitle: Build a Safer Future With Us
+heroText: We value careful work, technical curiosity, dependable service, and people who take safety seriously.
+heroImage: /assets/images/site/maintenance-technician.webp
+---
+{% include "components/hero.njk" %}
+
+<section class="section-padding">
+  <div class="container contact-grid">
+    <div>
+      <p class="eyebrow">Careers</p>
+      <h2>Register your interest</h2>
+      <p>We welcome interest from experienced technicians, engineers, project coordinators, sales professionals, and early-career candidates who want to grow in the elevator industry.</p>
+      <p>Open roles will be advertised here when available. You can also register your interest using the form, and our team will contact suitable candidates when an opportunity arises.</p>
+      <div class="notice-box">
+        <h3>What we value</h3>
+        <ul>
+          <li>A strong commitment to safety</li>
+          <li>Professional and respectful customer service</li>
+          <li>Careful technical work and willingness to learn</li>
+          <li>Clear communication and dependable teamwork</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <p class="eyebrow">Join our talent network</p>
+      <h2>Tell us about yourself</h2>
+      <form name="careers" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="contact-form">
+        <input type="hidden" name="form-name" value="careers">
+        <p class="hidden-field"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+        <div class="form-group"><label for="career-name">Full name <span aria-hidden="true">*</span></label><input type="text" id="career-name" name="name" autocomplete="name" required></div>
+        <div class="form-group"><label for="career-email">Email address <span aria-hidden="true">*</span></label><input type="email" id="career-email" name="email" autocomplete="email" required></div>
+        <div class="form-group"><label for="career-phone">Phone number</label><input type="tel" id="career-phone" name="phone" autocomplete="tel"></div>
+        <div class="form-group"><label for="career-area">Area of interest <span aria-hidden="true">*</span></label><select id="career-area" name="area" required><option value="">Select an area</option><option value="technical">Technical & installation</option><option value="maintenance">Maintenance & service</option><option value="engineering">Engineering & projects</option><option value="sales">Sales & customer service</option><option value="operations">Operations & administration</option><option value="internship">Internship or early career</option></select></div>
+        <div class="form-group"><label for="career-message">Experience and interests <span aria-hidden="true">*</span></label><textarea id="career-message" name="message" rows="7" required></textarea></div>
+        <p class="form-note">Submitting this form does not guarantee employment. We will retain your details only as described in our <a href="/privacy/">Privacy Policy</a>.</p>
+        <button type="submit" class="btn btn-primary">Register interest</button>
+      </form>
+    </div>
+  </div>
+</section>

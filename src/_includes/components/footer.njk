@@ -1,31 +1,47 @@
 <footer class="site-footer">
   <div class="container footer-content">
-    <div>
+    <div class="footer-about">
       <div class="footer-brand">Everest<span>World</span>Lifts</div>
-      <p>Safety-led elevator solutions for homes, businesses, and public facilities.</p>
+      <p>Safety-led elevators, escalators, and moving walkway solutions for buildings across Nigeria.</p>
+      <p>{{ site.deliveryArea }}.</p>
+      <a class="footer-feature-link" href="/about/">About Everest World Lifts</a>
     </div>
     <div>
-      <h2>Explore</h2>
+      <h2>Company</h2>
       <ul class="footer-links">
-        {% for item in site.navigation %}
+        {% for item in site.companyNavigation %}
           <li><a href="{{ item.url }}">{{ item.label }}</a></li>
         {% endfor %}
       </ul>
     </div>
     <div>
-      <h2>Contact</h2>
+      <h2>Policies</h2>
+      <ul class="footer-links">
+        {% for item in site.policyNavigation %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+      <h2 class="footer-follow-title">Follow Us</h2>
       <address>
-        <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a>
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-        <span>{{ site.address }}</span>
-      </address>
-      {% if site.social.length %}
-        <ul class="social-links">
+        {% if site.social.length %}
           {% for profile in site.social %}
-            <li><a href="{{ profile.url }}" rel="me noopener">{{ profile.label }}</a></li>
+            <a href="{{ profile.url }}" rel="me noopener">{{ profile.label }}</a>
           {% endfor %}
-        </ul>
-      {% endif %}
+        {% else %}
+          <span>Official profiles pending verification</span>
+        {% endif %}
+      </address>
+    </div>
+    <div>
+      <h2>Contact Info</h2>
+      <address class="footer-contact">
+        <a href="mailto:{{ site.supportEmail }}">{{ site.supportEmail }}</a>
+        <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a>
+        <span>{{ site.address }}</span>
+        {% for hours in site.businessHours %}
+          <span>{{ hours }}</span>
+        {% endfor %}
+      </address>
     </div>
   </div>
   <div class="footer-bottom">

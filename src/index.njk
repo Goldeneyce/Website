@@ -1,16 +1,25 @@
 ---
 layout: layouts/base.njk
-title: Everest World Lifts | Elevator Solutions in Abuja
-description: Elevator distribution, installation, maintenance, modernization, and consulting services for Nigerian homes and businesses.
+title: Everest World Lifts | Elevators, Escalators & Moving Walkways
+description: Elevator, escalator, and moving walkway distribution, installation, maintenance, modernization, and consulting services across Nigeria.
 navKey: home
 heroTitle: Ascend with Confidence
-heroText: Safety-led elevator and lift solutions for homes, businesses, and public facilities.
+heroText: Elevators, escalators, and moving walkways delivered with safety, precision, and dependable long-term support.
 heroPrimaryLabel: Explore products
 heroPrimaryUrl: /products/
 heroSecondaryLabel: Request a quote
 heroSecondaryUrl: /contact/
 ---
 {% include "components/hero.njk" %}
+
+<section class="track-record" aria-label="Company track record">
+  <div class="container track-record-grid">
+    <div><strong>2006</strong><span>Originally incorporated</span></div>
+    <div><strong>1985</strong><span>Leadership experience since</span></div>
+    <div><strong>15+</strong><span>Named projects in our profile</span></div>
+    <div><strong>Nationwide</strong><span>Delivery and project support</span></div>
+  </div>
+</section>
 
 <section class="section-padding" aria-labelledby="services-title">
   <div class="container">
@@ -20,7 +29,7 @@ heroSecondaryUrl: /contact/
       <article class="info-card"><span class="card-number">01</span><h3>Product Distribution</h3><p>Elevator systems selected around your building, traffic needs, and budget.</p></article>
       <article class="info-card"><span class="card-number">02</span><h3>Professional Installation</h3><p>Careful installation, testing, commissioning, and handover by trained technicians.</p></article>
       <article class="info-card"><span class="card-number">03</span><h3>Maintenance & Repair</h3><p>Preventive maintenance and responsive support designed to protect uptime and safety.</p></article>
-      <article class="info-card"><span class="card-number">04</span><h3>Modernization</h3><p>Targeted upgrades that improve reliability, efficiency, safety, and appearance.</p></article>
+      <article class="info-card"><span class="card-number">04</span><h3>Modernization & Planning</h3><p>Targeted upgrades and early-stage planning that align systems with present and future building needs.</p></article>
     </div>
     <div class="centered-action"><a href="/services/" class="btn btn-dark">View all services</a></div>
   </div>
@@ -33,9 +42,22 @@ heroSecondaryUrl: /contact/
     <div class="image-card-grid">
       <a href="/products/#passenger" class="image-card"><img src="/assets/images/site/passenger-elevator.webp" alt="Modern passenger elevator cabin" loading="lazy"><span><strong>Passenger Elevators</strong><small>Commercial, residential, and institutional use</small></span></a>
       <a href="/products/#freight" class="image-card"><img src="/assets/images/site/freight-elevator.webp" alt="Industrial freight elevator" loading="lazy"><span><strong>Freight & Service Lifts</strong><small>Reliable movement of goods and equipment</small></span></a>
-      <a href="/products/#accessibility" class="image-card"><img src="/assets/images/site/accessibility-lift.webp" alt="Wheelchair platform lift beside stairs" loading="lazy"><span><strong>Accessibility Solutions</strong><small>Inclusive vertical access</small></span></a>
-      <a href="/products/#special" class="image-card"><img src="/assets/images/site/panoramic-elevator.webp" alt="Panoramic glass elevator in a hotel atrium" loading="lazy"><span><strong>Specialized Lifts</strong><small>Panoramic, automotive, and custom solutions</small></span></a>
+      <a href="/products/#escalators" class="image-card"><img src="/assets/images/company/escalators.jpg" alt="Escalators in a commercial interior" loading="lazy"><span><strong>Escalators</strong><small>Continuous movement for busy public spaces</small></span></a>
+      <a href="/products/#walkways" class="image-card"><img src="/assets/images/company/moving-walkway.jpg" alt="Moving walkway in an enclosed passage" loading="lazy"><span><strong>Moving Walkways</strong><small>Convenient horizontal and inclined movement</small></span></a>
     </div>
+  </div>
+</section>
+
+<section class="section-padding" aria-labelledby="experience-title">
+  <div class="container split-feature">
+    <div>
+      <p class="eyebrow">Established experience</p>
+      <h2 id="experience-title">Serving complex buildings since 2006</h2>
+      <p>Everest World Lifts was originally incorporated as Everest Elevators Ltd in June 2006 and adopted its current name in February 2019.</p>
+      <p>Our corporate profile records elevator, escalator, installation, replacement, and maintenance work for government institutions, commercial facilities, hospitality businesses, and residential properties.</p>
+      <a href="/projects/" class="btn btn-primary">View selected experience</a>
+    </div>
+    <img src="/assets/images/company/technical-team.jpg" alt="Everest World Lifts technical team wearing safety equipment" loading="lazy">
   </div>
 </section>
 
@@ -50,10 +72,13 @@ heroSecondaryUrl: /contact/
         {% for post in posts %}
           {% if loop.index <= 3 %}
           <article class="blog-card">
-            <p class="post-date">{{ post.publishedAt | readableDate }}</p>
-            <h3><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h3>
-            <p>{{ post.excerpt }}</p>
-            <a class="text-link" href="/blog/{{ post.slug }}/">Read article</a>
+            {% if post.imageUrl %}<a class="blog-card-image" href="/blog/{{ post.slug }}/"><img src="{{ post.imageUrl }}" alt="{{ post.imageAlt or post.title }}" loading="lazy"></a>{% endif %}
+            <div class="blog-card-content">
+              <p class="blog-meta"><span>{{ post.category or "Elevator insights" }}</span><time datetime="{{ post.publishedAt }}">{{ post.publishedAt | readableDate }}</time></p>
+              <h3><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h3>
+              <p>{{ post.excerpt }}</p>
+              <a class="text-link" href="/blog/{{ post.slug }}/">Read article</a>
+            </div>
           </article>
           {% endif %}
         {% endfor %}
