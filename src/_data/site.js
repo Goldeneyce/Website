@@ -52,6 +52,7 @@ module.exports = {
   policyNavigation: [
     { label: "Policies", url: "/policies/" },
     { label: "Privacy Policy", url: "/privacy/" },
+    { label: "Data Deletion", url: "/data-deletion/" },
     { label: "Terms & Conditions", url: "/terms/" },
   ],
 };
